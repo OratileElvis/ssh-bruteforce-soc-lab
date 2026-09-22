@@ -57,5 +57,9 @@ Screenshots:
 # 8. Lessons Learned
 This investigation highlighted that a security control existing on paper (PAM's configured max-retry lockout) is not the same as a security control actually functioning — the lockout threshold was set, but sshd ignored it, allowing the brute-force to continue unimpeded. This reinforces the importance of verifying that controls are enforced, not just configured. Key takeaways for hardening this environment: enforce PAM's max-retry lockout correctly, implement automated IP blocking (e.g. fail2ban) after repeated failures, apply rate limiting on SSH connection attempts, and move toward key-based SSH authentication instead of passwords entirely.
 
+
+<img width="664" height="291" alt="auth-log-2" src="https://github.com/user-attachments/assets/2c13ffcb-d7a8-47aa-ac61-fe39fdecbccc" />
+<img width="715" height="402" alt="auth-log-1" src="https://github.com/user-attachments/assets/eddf3353-21a5-40bc-91da-baf25ae4328b" />
+
 ---
 *Lab conducted in an isolated VMware host-only network for educational purposes only.*
